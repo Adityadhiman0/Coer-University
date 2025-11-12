@@ -1,0 +1,26 @@
+Installing python
+
+
+Steps to Install Python on Windows
+1. Check if Python is Already Installed
+Open Command Prompt.
+Type python --version or python3 --version.
+If Python is installed, the version number will be displayed. If not, proceed to the next step.
+2. Download the Python Installer
+Go to the official Python website: python.org/downloads.
+Click on the "Download Python" button for the latest version (preferably Python 3).
+3. Run the Installer
+Locate the downloaded .exe file and double-click it to start the installation.
+In the installer window, check the following options:
+Add Python to PATH: This allows you to run Python from the command line.
+Install for all users: This option requires admin rights.
+Click on Install Now to proceed with the default settings.
+4. Verify the Installation
+After installation, open Command Prompt again.
+Type python --version to confirm that Python is installed correctly.
+You should see the version number displayed.
+5. Install an IDE (Optional)
+For coding, consider installing an Integrated Development Environment (IDE) like Visual Studio Code or PyCharm for a better coding experience.
+6. Start Coding
+You can now start writing Python code using any text editor or IDE. To run Python scripts, use the command line or the IDE's built-in terminal.
+These steps will help you successfully install Python on your Windows system.
