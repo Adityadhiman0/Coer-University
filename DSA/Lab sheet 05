@@ -1,0 +1,153 @@
+#include <iostream>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <string>
+#include <sstream>
+using namespace std;
+
+// Recursive factorial
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
+
+// Evaluate Postfix (Polish Notation)
+int evaluatePostfix(string expr) {
+    stack<int> st;
+    stringstream ss(expr);
+    string token;
+    while (ss >> token) {
+        if (isdigit(token[0])) {
+            st.push(stoi(token));
+        } else {
+            int b = st.top(); st.pop();
+            int a = st.top(); st.pop();
+            switch (token[0]) {
+                case '+': st.push(a + b); break;
+                case '-': st.push(a - b); break;
+                case '*': st.push(a * b); break;
+                case '/': st.push(a / b); break;
+            }
+        }
+    }
+    return st.top();
+}
+
+// Stack class
+class MyStack {
+    stack<int> st;
+public:
+    void push(int x) { st.push(x); }
+    void pop() { if (!st.empty()) st.pop(); else cout << "Stack Empty!\n"; }
+    void display() {
+        stack<int> temp = st;
+        cout << "Stack: ";
+        while (!temp.empty()) {
+            cout << temp.top() << " ";
+            temp.pop();
+        }
+        cout << endl;
+    }
+};
+
+// Queue class
+class MyQueue {
+    queue<int> q;
+public:
+    void enqueue(int x) { q.push(x); }
+    void dequeue() { if (!q.empty()) q.pop(); else cout << "Queue Empty!\n"; }
+    void display() {
+        queue<int> temp = q;
+        cout << "Queue: ";
+        while (!temp.empty()) {
+            cout << temp.front() << " ";
+            temp.pop();
+        }
+        cout << endl;
+    }
+};
+
+// Deque class
+class MyDeque {
+    deque<int> dq;
+public:
+    void enqueue(int x) { dq.push_back(x); }
+    void dequeueFront() { if (!dq.empty()) dq.pop_front(); else cout << "Deque Empty!\n"; }
+    void dequeueBack() { if (!dq.empty()) dq.pop_back(); else cout << "Deque Empty!\n"; }
+    void display() {
+        cout << "Deque: ";
+        for (int x : dq) cout << x << " ";
+        cout << endl;
+    }
+};
+
+int main() {
+    MyStack stackObj;
+    MyQueue queueObj;
+    MyDeque dequeObj;
+    int choice;
+
+    do {
+        cout << "\n--- Main Menu ---\n";
+        cout << "1. Stack\n2. Queue\n3. Recursion (Factorial)\n4. Polish Notation\n5. Exit\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        switch (choice) {
+        case 1: {
+            int ch;
+            do {
+                cout << "\n--- Stack Menu ---\n1. Push\n2. Pop\n3. Display\n4. Back\n";
+                cin >> ch;
+                switch (ch) {
+                    case 1: { int x; cout << "Enter value: "; cin >> x; stackObj.push(x); break; }
+                    case 2: stackObj.pop(); break;
+                    case 3: stackObj.display(); break;
+                }
+            } while (ch != 4);
+            break;
+        }
+        case 2: {
+            int ch;
+            do {
+                cout << "\n--- Queue Menu ---\n1. Simple Queue\n2. Dequeue (I/P Restricted)\n3. Dequeue (O/P Restricted)\n4. Back\n";
+                cin >> ch;
+                switch (ch) {
+                    case 1: {
+                        int qch;
+                        do {
+                            cout << "\nQueue Ops: 1. Enqueue 2. Dequeue 3. Display 4. Back\n";
+                            cin >> qch;
+                            switch (qch) {
+                                case 1: { int x; cout << "Enter value: "; cin >> x; queueObj.enqueue(x); break; }
+                                case 2: queueObj.dequeue(); break;
+                                case 3: queueObj.display(); break;
+                            }
+                        } while (qch != 4);
+                        break;
+                    }
+                    case 2: { int x; cout << "Enter value: "; cin >> x; dequeObj.enqueue(x); dequeObj.dequeueFront(); dequeObj.display(); break; }
+                    case 3: { int x; cout << "Enter value: "; cin >> x; dequeObj.enqueue(x); dequeObj.dequeueBack(); dequeObj.display(); break; }
+                }
+            } while (ch != 4);
+            break;
+        }
+        case 3: {
+            int n; cout << "Enter number: "; cin >> n;
+            cout << "Factorial of " << n << " = " << factorial(n) << endl;
+            break;
+        }
+        case 4: {
+            string expr; cout << "Enter postfix expression (space separated): ";
+            cin.ignore(); getline(cin, expr);
+            cout << "Result = " << evaluatePostfix(expr) << endl;
+            break;
+        }
+        case 5: cout << "Exiting...\n"; break;
+        default: cout << "Invalid choice!\n";
+        }
+    } while (choice != 5);
+
+    return 0;
+}
