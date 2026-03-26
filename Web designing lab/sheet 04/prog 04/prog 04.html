@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Var, Let, Const Demo</title>
+</head>
+<body>
+  <h2>JavaScript Variable Demo</h2>
+  <div id="output"></div>
+
+  <script>
+    // Declaring a variable with var
+    var name = "Aditya";
+    // Declaring a variable with let
+    let age = 25;
+    // Declaring a constant with const
+    const country = "India";
+
+    // Demonstrating reassignment
+    name = "AAdi";   // var  reassignment
+    age = 30;       // let  reassignment
+    
+
+    // Display results on the webpage
+    let result = "";
+    result += "Name (var): " + name + "<br>";
+    result += "Age (let): " + age + "<br>";
+    result += "Country (const): " + country + "<br>";
+    document.getElementById("output").innerHTML = result;
+  </script>
+</body>
+</html>
