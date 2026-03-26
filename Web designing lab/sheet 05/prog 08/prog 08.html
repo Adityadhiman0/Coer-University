@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Image on Button Click</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      border: 2px solid #333;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h2>Change Image Demo</h2>
+  <img id="myImage" src="https://via.placeholder.com/300x200?text=Image+1" alt="Demo Image">
+  <button id="changeBtn">Change Image</button>
+
+  <script>
+    const image = document.getElementById("myImage");
+    const button = document.getElementById("changeBtn");
+
+    // Two sample image URLs
+    const img1 = "https://via.placeholder.com/300x200?text=Image+1";
+    const img2 = "https://via.placeholder.com/300x200?text=Image+2";
+
+    button.addEventListener("click", () => {
+      // Toggle between two images
+      if (image.src.includes("Image+1")) {
+        image.src = img2;
+      } else {
+        image.src = img1;
+      }
+    });
+  </script>
+</body>
+</html>

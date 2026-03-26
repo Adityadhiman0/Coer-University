@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 400px;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Interactive Webpage Demo</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <br>
+    <button onclick="showGreeting()">Say Hello</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function showGreeting() {
+      const name = document.getElementById("nameInput").value.trim();
+      const output = document.getElementById("output");
+
+      if (name) {
+        output.textContent = `Hello, ${name}! Welcome to this interactive webpage.`;
+      } else {
+        output.textContent = "Please enter your name first.";
+      }
+    }
+  </script>
+</body>
+</html>

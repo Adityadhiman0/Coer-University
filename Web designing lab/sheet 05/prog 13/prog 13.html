@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Math Functions Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      width: 400px;
+      text-align: center;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    #output {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Math Functions Demo</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <br>
+    <button onclick="showSqrt()">Square Root</button>
+    <button onclick="showRandom()">Random Number</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function showSqrt() {
+      const num = document.getElementById("numberInput").value;
+      if (num === "") {
+        document.getElementById("output").textContent = "Please enter a number.";
+      } else {
+        document.getElementById("output").textContent =
+          `Square root of ${num} = ${Math.sqrt(num)}`;
+      }
+    }
+
+    function showRandom() {
+      const randomNum = Math.random(); // Generates a number between 0 and 1
+      document.getElementById("output").textContent =
+        `Random number (0–1): ${randomNum}`;
+    }
+  </script>
+</body>
+</html>

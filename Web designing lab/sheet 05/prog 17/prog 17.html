@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>setInterval Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 400px;
+    }
+
+    #counter {
+      margin-top: 20px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>setInterval() Demo</h2>
+    <button onclick="startCounter()">Start Counter</button>
+    <button onclick="stopCounter()">Stop Counter</button>
+    <div id="counter">Counter: 0</div>
+  </div>
+
+  <script>
+    let count = 0;
+    let intervalId;
+
+    function startCounter() {
+      // Prevent multiple intervals from stacking
+      if (!intervalId) {
+        intervalId = setInterval(() => {
+          count++;
+          document.getElementById("counter").textContent = `Counter: ${count}`;
+        }, 1000); // runs every 1000 ms (1 second)
+      }
+    }
+
+    function stopCounter() {
+      clearInterval(intervalId);
+      intervalId = null; // reset so it can be started again
+    }
+  </script>
+</body>
+</html>

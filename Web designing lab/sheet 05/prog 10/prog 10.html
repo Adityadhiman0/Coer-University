@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Display Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      width: 400px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background: #e0f7fa;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Array Elements</h2>
+    <ul id="arrayList"></ul>
+  </div>
+
+  <script>
+    // Create an array
+    const fruits = ["Apple", "Banana", "Cherry", "Mango", "Orange"];
+
+    // Get the list element
+    const list = document.getElementById("arrayList");
+
+    // Display array elements
+    fruits.forEach(function(item) {
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>setTimeout Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 400px;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>setTimeout() Demo</h2>
+    <button onclick="showMessage()">Click Me</button>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").textContent = "Please wait...";
+      
+      // After 3 seconds (3000 ms), update the message
+      setTimeout(() => {
+        document.getElementById("message").textContent = "Hello! This message appeared after 3 seconds.";
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirm Box Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 400px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Confirm Box Example</h2>
+    <button onclick="showConfirm()">Click Me</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function showConfirm() {
+      // Display confirmation box
+      const userChoice = confirm("Do you want to proceed?");
+      
+      // Handle user response
+      if (userChoice) {
+        document.getElementById("result").textContent = "You clicked OK!";
+      } else {
+        document.getElementById("result").textContent = "You clicked Cancel!";
+      }
+    }
+  </script>
+</body>
+</html>

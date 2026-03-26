@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sum of Array Elements</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      width: 400px;
+      text-align: center;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sum of Array Elements</h2>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Create an array
+    const numbers = [10, 20, 30, 40, 50];
+
+    // Calculate sum using reduce
+    const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+
+    // Display result
+    document.getElementById("result").textContent =
+      `Array: [${numbers.join(", ")}] → Sum = ${sum}`;
+  </script>
+</body>
+</html>
