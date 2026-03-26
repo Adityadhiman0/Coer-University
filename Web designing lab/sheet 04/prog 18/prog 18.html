@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prompt Example</title>
+</head>
+<body>
+  <h2>Take Input Using prompt()</h2>
+
+  <!-- Button -->
+  <button onclick="takeInput()">Click to Enter Number</button>
+
+  <!-- Output area -->
+  <h3>Result:</h3>
+  <p id="output"></p>
+
+  <script>
+    function takeInput() {
+      // Take input using prompt()
+      let number = prompt("Please enter a number:");
+
+      // Convert input to number
+      number = parseFloat(number);
+
+      // Check if input is valid
+      if (isNaN(number)) {
+        document.getElementById("output").innerHTML = "Invalid input! Please enter a number.";
+      } else {
+        document.getElementById("output").innerHTML = "You entered: " + number;
+      }
+    }
+  </script>
+</body>
+</html>

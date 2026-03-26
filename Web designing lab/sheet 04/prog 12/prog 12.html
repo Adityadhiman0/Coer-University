@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Loop Example</title>
+</head>
+<body>
+  <h2>Print Numbers from 1 to 10</h2>
+
+  <!-- Button -->
+  <button onclick="printNumbers()">Show Numbers</button>
+
+  <!-- Output area -->
+  <h3>Result:</h3>
+  <p id="output"></p>
+
+  <script>
+    function printNumbers() {
+      let result = "";
+
+      // Using for loop to print numbers 1 to 10
+      for (let i = 1; i <= 10; i++) {
+        result += i + " ";
+      }
+
+      // Display result on webpage
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

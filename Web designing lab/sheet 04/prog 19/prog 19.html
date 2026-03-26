@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>innerHTML Demo</title>
+</head>
+<body>
+  <h2>Display Output Using innerHTML</h2>
+
+  <!-- Button -->
+  <button onclick="showMessage()">Click Me</button>
+
+  <!-- Output area -->
+  <h3>Result:</h3>
+  <p id="output"></p>
+
+  <script>
+    function showMessage() {
+      // Using innerHTML to display output inside the <p> element
+      document.getElementById("output").innerHTML = "Hello! This message is displayed using innerHTML.";
+    }
+  </script>
+</body>
+</html>

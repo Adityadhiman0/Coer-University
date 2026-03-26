@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Two Numbers Function</title>
+</head>
+<body>
+  <h2>Add Two Numbers using JavaScript Function</h2>
+
+  <!-- Input fields -->
+  <label for="num1">Enter first number:</label>
+  <input type="number" id="num1"><br><br>
+
+  <label for="num2">Enter second number:</label>
+  <input type="number" id="num2"><br><br>
+
+  <!-- Button -->
+  <button onclick="showSum()">Add Numbers</button>
+
+  <!-- Output area -->
+  <h3>Result:</h3>
+  <p id="output"></p>
+
+  <script>
+    // JavaScript function to add two numbers
+    function addNumbers(a, b) {
+      return a + b;
+    }
+
+    // Function to get input values and display result
+    function showSum() {
+      let number1 = parseFloat(document.getElementById("num1").value);
+      let number2 = parseFloat(document.getElementById("num2").value);
+
+      let sum = addNumbers(number1, number2);
+
+      document.getElementById("output").innerHTML = 
+        "The sum of " + number1 + " and " + number2 + " is: " + sum;
+    }
+  </script>
+</body>
+</html>

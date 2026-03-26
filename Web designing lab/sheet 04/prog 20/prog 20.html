@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Comments Demo</title>
+</head>
+<body>
+  <h2>Demonstrating Comments in JavaScript</h2>
+
+  <!-- Button -->
+  <button onclick="showDemo()">Run Demo</button>
+
+  <!-- Output area -->
+  <h3>Result:</h3>
+  <h5>Number 1: 10</h5>
+  <h5>Number 2: 5</h5>
+  <p id="output"></p>
+
+  <script>
+    function showDemo() {
+      let result = "";
+
+      // This is a single-line comment
+      // It explains that we are declaring two numbers
+      let num1 = 10;  
+      let num2 = 5;   
+
+      /* 
+        This is a multi-line comment.
+        We will now perform addition, subtraction, multiplication, and division.
+      */
+
+      // Addition
+      let sum = num1 + num2;  
+      result += "Addition: " + sum + "<br>";
+
+      // Subtraction
+      let difference = num1 - num2;  
+      result += "Subtraction: " + difference + "<br>";
+
+      // Multiplication
+      let product = num1 * num2;  
+      result += "Multiplication: " + product + "<br>";
+
+      // Division
+      let quotient = num1 / num2;  
+      result += "Division: " + quotient + "<br>";
+
+      // Display result on webpage
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+</body>
+</html>
