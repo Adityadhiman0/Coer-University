@@ -1,0 +1,50 @@
+#include <iostream>
+#include <stack>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+// Function to perform arithmetic operations
+int applyOp(int a, int b, char op) {
+    switch (op) {
+        case '+': return a + b;
+        case '-': return a - b;
+        case '*': return a * b;
+        case '/': return a / b; // assumes b != 0
+    }
+    return 0;
+}
+
+// Function to evaluate prefix expression
+int evaluatePrefix(string expr) {
+    stack<int> st;
+
+    // Traverse the expression from right to left
+    for (int i = expr.size() - 1; i >= 0; i--) {
+        char c = expr[i];
+
+        // If operand, push to stack
+        if (isdigit(c)) {
+            st.push(c - '0'); // convert char to int
+        }
+        // If operator, pop two operands and apply
+        else {
+            int val1 = st.top(); st.pop();
+            int val2 = st.top(); st.pop();
+            int result = applyOp(val1, val2, c);
+            st.push(result);
+        }
+    }
+
+    return st.top();
+}
+
+int main() {
+    string expr;
+    cout << "Enter prefix expression (single-digit operands): ";
+    cin >> expr;
+
+    cout << "Result: " << evaluatePrefix(expr) << endl;
+
+    return 0;
+}
