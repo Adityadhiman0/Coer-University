@@ -1,0 +1,39 @@
+#include <iostream>
+#include <stack>
+#include <string>
+using namespace std;
+
+string removeAdjacentDuplicates(const string& str) {
+    stack<char> s;
+
+    for (char c : str) {
+        // If stack is empty or top is not equal to current char, push it
+        if (s.empty() || s.top() != c) {
+            s.push(c);
+        }
+        // If top is equal to current char, pop it (remove duplicate)
+        else {
+            s.pop();
+        }
+    }
+
+    // Build the result string from stack
+    string result = "";
+    while (!s.empty()) {
+        result = s.top() + result; // prepend to maintain order
+        s.pop();
+    }
+
+    return result;
+}
+
+int main() {
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
+
+    string output = removeAdjacentDuplicates(input);
+    cout << "String after removing adjacent duplicates: " << output << endl;
+
+    return 0;
+}
