@@ -1,0 +1,23 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int peek(stack<int>& s) {
+    if (s.empty()) {
+        cout << "Stack is empty!" << endl;
+        return -1; // return some default value
+    }
+    return s.top(); // just look at the top
+}
+
+int main() {
+    stack<int> s;
+    s.push(5);
+    s.push(10);
+    s.push(15);
+
+    cout << "Top element is: " << peek(s) << endl;
+    cout << "Stack size is still: " << s.size() << endl;
+
+    return 0;
+}
