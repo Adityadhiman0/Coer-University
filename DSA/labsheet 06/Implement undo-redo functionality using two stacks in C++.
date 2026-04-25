@@ -1,0 +1,63 @@
+#include <iostream>
+#include <stack>
+#include <string>
+using namespace std;
+
+class Editor {
+    stack<string> undoStack;
+    stack<string> redoStack;
+    string currentText;
+
+public:
+    void type(const string& text) {
+        undoStack.push(currentText);   // save current state
+        currentText += text;           // append new text
+        while (!redoStack.empty())     // clear redo history
+            redoStack.pop();
+        cout << "Typed: " << text << endl;
+    }
+
+    void undo() {
+        if (undoStack.empty()) {
+            cout << "Nothing to undo.\n";
+            return;
+        }
+        redoStack.push(currentText);   // save current state for redo
+        currentText = undoStack.top(); // restore previous state
+        undoStack.pop();
+        cout << "Undo performed.\n";
+    }
+
+    void redo() {
+        if (redoStack.empty()) {
+            cout << "Nothing to redo.\n";
+            return;
+        }
+        undoStack.push(currentText);   // save current state for undo
+        currentText = redoStack.top(); // restore redo state
+        redoStack.pop();
+        cout << "Redo performed.\n";
+    }
+
+    void show() {
+        cout << "Current text: \"" << currentText << "\"\n";
+    }
+};
+
+int main() {
+    Editor editor;
+
+    editor.type("Hello");
+    editor.show();
+
+    editor.type(" World");
+    editor.show();
+
+    editor.undo();
+    editor.show();
+
+    editor.redo();
+    editor.show();
+
+    return 0;
+}
