@@ -1,0 +1,66 @@
+#include <iostream>
+#include <stack>
+#include <string>
+using namespace std;
+
+class Browser {
+    stack<string> backStack;     // history of visited pages
+    stack<string> forwardStack;  // forward history
+    string currentPage;
+
+public:
+    Browser(string homepage) {
+        currentPage = homepage;
+        cout << "Starting at: " << currentPage << endl;
+    }
+
+    void visit(string url) {
+        backStack.push(currentPage);   // save current page
+        currentPage = url;             // move to new page
+        while (!forwardStack.empty())  // clear forward history
+            forwardStack.pop();
+        cout << "Visited: " << currentPage << endl;
+    }
+
+    void back() {
+        if (backStack.empty()) {
+            cout << "No pages in back history." << endl;
+            return;
+        }
+        forwardStack.push(currentPage); // save current page to forward stack
+        currentPage = backStack.top();  // go back
+        backStack.pop();
+        cout << "Back to: " << currentPage << endl;
+    }
+
+    void forward() {
+        if (forwardStack.empty()) {
+            cout << "No pages in forward history." << endl;
+            return;
+        }
+        backStack.push(currentPage);    // save current page to back stack
+        currentPage = forwardStack.top(); // go forward
+        forwardStack.pop();
+        cout << "Forward to: " << currentPage << endl;
+    }
+
+    void showCurrentPage() {
+        cout << "Current page: " << currentPage << endl;
+    }
+};
+
+int main() {
+    Browser browser("homepage.com");
+
+    browser.visit("page1.com");
+    browser.visit("page2.com");
+    browser.visit("page3.com");
+
+    browser.back();    // back to page2.com
+    browser.back();    // back to page1.com
+    browser.forward(); // forward to page2.com
+
+    browser.showCurrentPage();
+
+    return 0;
+}
