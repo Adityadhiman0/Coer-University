@@ -1,0 +1,66 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// User-defined stack class
+class Stack {
+    int top;
+    int capacity;
+    string* arr;
+
+public:
+    Stack(int size) {
+        capacity = size;
+        arr = new string[capacity];
+        top = -1;
+    }
+
+    void push(string funcName) {
+        if (top == capacity - 1) {
+            cout << "Stack Overflow: Cannot call " << funcName << endl;
+            return;
+        }
+        arr[++top] = funcName;
+        cout << "Function " << funcName << " called." << endl;
+    }
+
+    void pop() {
+        if (top == -1) {
+            cout << "Stack Underflow: No function to return." << endl;
+            return;
+        }
+        cout << "Function " << arr[top--] << " returned." << endl;
+    }
+
+    string peek() {
+        if (top == -1) return "Stack is empty";
+        return arr[top];
+    }
+
+    bool isEmpty() {
+        return top == -1;
+    }
+};
+
+int main() {
+    Stack callStack(10); // simulate call stack with size 10
+
+    // Simulating function calls
+    callStack.push("main");
+    callStack.push("funcA");
+    callStack.push("funcB");
+
+    cout << "Currently executing: " << callStack.peek() << endl;
+
+    // Simulating returns
+    callStack.pop();
+    cout << "Currently executing: " << callStack.peek() << endl;
+
+    callStack.pop();
+    cout << "Currently executing: " << callStack.peek() << endl;
+
+    callStack.pop();
+    cout << "Currently executing: " << callStack.peek() << endl;
+
+    return 0;
+}
