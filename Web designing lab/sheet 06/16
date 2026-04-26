@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Text on Button Click</title>
+</head>
+<body>
+  <h1 id="heading">Original Heading</h1>
+  <p id="paragraph">This is the original paragraph text.</p>
+
+  <!-- Button -->
+  <button onclick="changeText()">Click to Change Text</button>
+
+  <!-- JavaScript -->
+  <script>
+    function changeText() {
+      document.getElementById("heading").textContent = "Updated Heading!";
+      document.getElementById("paragraph").textContent = "The paragraph text has been changed using JavaScript.";
+    }
+  </script>
+</body>
+</html>
