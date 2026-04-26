@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Alert Example</title>
+</head>
+<body>
+  <h1>JavaScript Alert Demo</h1>
+  <p>Click the button below to see an alert message.</p>
+
+  <!-- Button to trigger alert -->
+  <button onclick="showMessage()">Click Me</button>
+
+  <!-- JavaScript -->
+  <script>
+    function showMessage() {
+      alert("Hello! This is an alert message displayed using JavaScript.");
+    }
+  </script>
+</body>
+</html>
