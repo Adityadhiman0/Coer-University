@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Webpage Layout</title>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Website</h1>
+    <p>Welcome to my simple webpage layout</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main>
+    <section id="home">
+      <h2>Home</h2>
+      <p>This is the homepage section where you can introduce your site.</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Here you can write about yourself or your business.</p>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <p>List the services or products you offer here.</p>
+    </section>
+  </main>
+
+  <!-- Sidebar -->
+  <aside>
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#home">Go to Home</a></li>
+      <li><a href="#about">Learn About Us</a></li>
+      <li><a href="#services">Our Services</a></li>
+    </ul>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 My Website | Designed with HTML</p>
+  </footer>
+</body>
+</html>
