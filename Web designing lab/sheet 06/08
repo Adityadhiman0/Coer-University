@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline CSS Example</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f9f9f9;">
+
+  <!-- Header -->
+  <h1 style="color: darkgreen; text-align: center;">Welcome to My Styled Webpage</h1>
+  <p style="text-align: center; font-size: 18px; color: #555;">
+    This page demonstrates how to apply inline CSS styling.
+  </p>
+
+  <!-- Section with styled heading and paragraph -->
+  <h2 style="color: #2e7d32; border-bottom: 2px solid #2e7d32;">About Inline CSS</h2>
+  <p style="line-height: 1.6; background-color: #e8f5e9; padding: 10px;">
+    Inline CSS allows you to apply styles directly to individual HTML elements using the <code>style</code> attribute.
+    It is useful for quick styling but not recommended for large projects.
+  </p>
+
+  <!-- Styled list -->
+  <h2 style="color: #1565c0;">Advantages of Inline CSS</h2>
+  <ul style="list-style-type: square; color: #444;">
+    <li style="margin-bottom: 5px;">Quick and easy to apply</li>
+    <li style="margin-bottom: 5px;">No need for external files</li>
+    <li style="margin-bottom: 5px;">Good for testing or small changes</li>
+  </ul>
+
+  <!-- Styled image -->
+  <h2 style="color: #d32f2f;">Example Image</h2>
+  <img src="https://www.w3schools.com/html/img_chania.jpg" 
+       alt="Beautiful Landscape" 
+       style="border: 3px solid #d32f2f; border-radius: 10px; width: 300px;">
+
+  <!-- Footer -->
+  <footer style="text-align: center; margin-top: 20px; background-color: #333; color: #fff; padding: 10px;">
+    <p>&copy; 2026 Inline CSS Demo</p>
+  </footer>
+
+</body>
+</html>
