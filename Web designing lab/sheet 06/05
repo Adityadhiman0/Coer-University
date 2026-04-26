@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyperlinks Example Webpage</title>
+</head>
+<body>
+  <!-- Heading -->
+  <h1>Welcome to My Hyperlink Webpage</h1>
+  <p>This page shows how to use hyperlinks in HTML.</p>
+
+  <!-- Internal Links -->
+  <h2>Internal Links</h2>
+  <p>Click the links below to jump to different sections of this page:</p>
+  <ul>
+    <li><a href="#section1">Go to Section 1</a></li>
+    <li><a href="#section2">Go to Section 2</a></li>
+    <li><a href="#section3">Go to Section 3</a></li>
+  </ul>
+
+  <!-- Sections -->
+  <h3 id="section1">Section 1</h3>
+  <p>This is the first section of the page.</p>
+
+  <h3 id="section2">Section 2</h3>
+  <p>This is the second section of the page.</p>
+
+  <h3 id="section3">Section 3</h3>
+  <p>This is the third section of the page.</p>
+
+  <!-- External Links -->
+  <h2>External Links</h2>
+  <p>You can also link to other websites:</p>
+  <ul>
+    <li><a href="https://www.google.com" target="_blank">Visit Google</a></li>
+    <li><a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a></li>
+    <li><a href="https://www.w3schools.com" target="_blank">Learn HTML at W3Schools</a></li>
+  </ul>
+
+  <!-- Email Link -->
+  <h2>Email Link</h2>
+  <p>You can create a link to send an email:</p>
+  <a href="mailto:example@email.com">Send me an email</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 My Hyperlink Webpage</p>
+  </footer>
+</body>
+</html>
