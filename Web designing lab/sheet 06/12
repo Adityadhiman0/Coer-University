@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: #e3f2fd;   /* Light blue background */
+      border: 3px solid #1565c0;   /* Blue border */
+      padding: 20px;               /* Space inside the box */
+      margin: 20px;                /* Space outside the box */
+      width: 300px;
+    }
+
+    .box h2 {
+      margin-top: 0;               /* Remove default top margin */
+      color: #1565c0;
+    }
+
+    .box p {
+      line-height: 1.6;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Box Model Demo</h1>
+  <p>The box model consists of <strong>margin</strong>, <strong>border</strong>, <strong>padding</strong>, and <strong>content</strong>. Below is an example:</p>
+
+  <!-- Box Example -->
+  <div class="box">
+    <h2>Box Title</h2>
+    <p>This box has a blue border, light blue background, padding inside, and margin outside.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Box Model Webpage</p>
+  </footer>
+</body>
+</html>
