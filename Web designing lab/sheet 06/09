@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internal CSS Example</title>
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    h2 {
+      color: #1565c0;
+      border-bottom: 2px solid #1565c0;
+      padding-bottom: 5px;
+    }
+    p {
+      line-height: 1.6;
+      color: #444;
+      margin: 10px 20px;
+    }
+    ul {
+      margin: 10px 40px;
+      list-style-type: square;
+      color: #333;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Webpage</h1>
+    <p>Styled using Internal CSS</p>
+  </header>
+
+  <!-- Content -->
+  <main>
+    <h2>About Internal CSS</h2>
+    <p>Internal CSS is written inside a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of an HTML document. It allows you to style multiple elements on the page without needing an external file.</p>
+
+    <h2>Advantages</h2>
+    <ul>
+      <li>Easy to apply styles to a single page</li>
+      <li>No need for external CSS file</li>
+      <li>Good for small projects or demos</li>
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Internal CSS Demo</p>
+  </footer>
+</body>
+</html>
