@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Interactive Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ===== CSS Styling ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #2e7d32;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      background: #a5d6a7;
+    }
+    .btn {
+      background: #43a047;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #1b5e20;
+    }
+    .content {
+      padding: 2rem;
+      text-align: center;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HTML Structure ===== -->
+  <header>
+    <h1>🌱 Welcome to My Webpage</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h2>Discover Interactive Design</h2>
+    <p>Click the button below to see some magic!</p>
+    <button class="btn" onclick="changeMessage()">Click Me</button>
+  </section>
+
+  <section class="content" id="about">
+    <h2>About This Page</h2>
+    <p>This webpage demonstrates how HTML, CSS, and JavaScript work together to create a responsive and interactive experience.</p>
+  </section>
+
+  <section class="content" id="contact">
+    <h2>Contact</h2>
+    <form onsubmit="submitForm(event)">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" required><br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" required><br><br>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 My Interactive Webpage</p>
+  </footer>
+
+  <!-- ===== JavaScript Interactivity ===== -->
+  <script>
+    function changeMessage() {
+      document.querySelector(".hero p").textContent = "✨ You clicked the button! JavaScript made this change.";
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      alert("Thank you, " + name + "! Your form has been submitted.");
+    }
+  </script>
+</body>
+</html>
