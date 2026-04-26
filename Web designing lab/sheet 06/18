@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Background Color</title>
+</head>
+<body style="text-align:center; font-family:Arial, sans-serif;">
+
+  <h1>Change Background Color Dynamically</h1>
+  <p>Click the button below to change the background color randomly.</p>
+
+  <!-- Button -->
+  <button onclick="changeBackground()">Change Color</button>
+
+  <!-- JavaScript -->
+  <script>
+    function changeBackground() {
+      // Array of colors
+      let colors = ["#f44336", "#4caf50", "#2196f3", "#ff9800", "#9c27b0", "#00bcd4"];
+      
+      // Pick a random color
+      let randomColor = colors[Math.floor(Math.random() * colors.length)];
+      
+      // Apply it to the body background
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+</body>
+</html>
