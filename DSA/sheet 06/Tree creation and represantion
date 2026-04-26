@@ -1,0 +1,168 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <algorithm>
+using namespace std;
+
+//
+// 1. General Tree using Left-Child Right-Sibling (LCRS)
+//
+struct GeneralTreeNode {
+    string value;
+    GeneralTreeNode* firstChild;
+    GeneralTreeNode* nextSibling;
+    GeneralTreeNode(string val) : value(val), firstChild(nullptr), nextSibling(nullptr) {}
+};
+
+void addChild(GeneralTreeNode* parent, string childVal) {
+    GeneralTreeNode* child = new GeneralTreeNode(childVal);
+    if (!parent->firstChild) {
+        parent->firstChild = child;
+    } else {
+        GeneralTreeNode* temp = parent->firstChild;
+        while (temp->nextSibling) temp = temp->nextSibling;
+        temp->nextSibling = child;
+    }
+}
+
+void printGeneralTree(GeneralTreeNode* root, int depth = 0) {
+    if (!root) return;
+    cout << string(depth*2, ' ') << root->value << "\n";
+    printGeneralTree(root->firstChild, depth+1);
+    printGeneralTree(root->nextSibling, depth);
+}
+
+//
+// 2. Binary Tree Node
+//
+struct BinaryTreeNode {
+    int data;
+    BinaryTreeNode* left;
+    BinaryTreeNode* right;
+    BinaryTreeNode(int val) : data(val), left(nullptr), right(nullptr) {}
+};
+
+//
+// 3. Binary Search Tree (BST)
+//
+class BST {
+public:
+    BinaryTreeNode* root;
+    BST() : root(nullptr) {}
+
+    BinaryTreeNode* insert(BinaryTreeNode* node, int val) {
+        if (!node) return new BinaryTreeNode(val);
+        if (val < node->data) node->left = insert(node->left, val);
+        else if (val > node->data) node->right = insert(node->right, val);
+        return node;
+    }
+
+    bool search(BinaryTreeNode* node, int val) {
+        if (!node) return false;
+        if (node->data == val) return true;
+        return val < node->data ? search(node->left, val) : search(node->right, val);
+    }
+
+    BinaryTreeNode* findMin(BinaryTreeNode* node) {
+        while (node && node->left) node = node->left;
+        return node;
+    }
+
+    BinaryTreeNode* deleteNode(BinaryTreeNode* node, int val) {
+        if (!node) return nullptr;
+        if (val < node->data) node->left = deleteNode(node->left, val);
+        else if (val > node->data) node->right = deleteNode(node->right, val);
+        else {
+            if (!node->left) {
+                BinaryTreeNode* temp = node->right;
+                delete node;
+                return temp;
+            } else if (!node->right) {
+                BinaryTreeNode* temp = node->left;
+                delete node;
+                return temp;
+            }
+            BinaryTreeNode* temp = findMin(node->right);
+            node->data = temp->data;
+            node->right = deleteNode(node->right, temp->data);
+        }
+        return node;
+    }
+
+    void inorder(BinaryTreeNode* node) {
+        if (!node) return;
+        inorder(node->left);
+        cout << node->data << " ";
+        inorder(node->right);
+    }
+};
+
+//
+// 4. AVL Tree (Outline)
+//
+struct AVLNode {
+    int data, height;
+    AVLNode* left;
+    AVLNode* right;
+    AVLNode(int val) : data(val), height(1), left(nullptr), right(nullptr) {}
+};
+
+// Rotations (LL, RR, LR, RL) would be implemented here.
+// Insert/Delete operations adjust balance factors and rotate accordingly.
+
+//
+// 5. Red-Black Tree (Outline)
+//
+enum Color { RED, BLACK };
+struct RBNode {
+    int data;
+    Color color;
+    RBNode* left, *right, *parent;
+    RBNode(int val) : data(val), color(RED), left(nullptr), right(nullptr), parent(nullptr) {}
+};
+// Insert/Delete operations enforce RB properties with recoloring and rotations.
+
+//
+// 6. B-Tree (Outline)
+//
+class BTreeNode {
+public:
+    vector<int> keys;
+    vector<BTreeNode*> children;
+    bool leaf;
+    BTreeNode(bool leaf) : leaf(leaf) {}
+};
+// Insert/Delete split/merge logic would be implemented here.
+
+//
+// MAIN DEMO
+//
+int main() {
+    cout << "=== General Tree (LCRS) ===\n";
+    GeneralTreeNode* root = new GeneralTreeNode("Root");
+    addChild(root, "Child1");
+    addChild(root, "Child2");
+    addChild(root->firstChild, "GrandChild1");
+    printGeneralTree(root);
+
+    cout << "\n=== Binary Search Tree ===\n";
+    BST tree;
+    tree.root = tree.insert(tree.root, 50);
+    tree.insert(tree.root, 30);
+    tree.insert(tree.root, 70);
+    tree.insert(tree.root, 20);
+    tree.insert(tree.root, 40);
+    tree.insert(tree.root, 60);
+    tree.insert(tree.root, 80);
+
+    cout << "Inorder Traversal: ";
+    tree.inorder(tree.root);
+    cout << "\nSearch 40: " << (tree.search(tree.root, 40) ? "Found" : "Not Found") << "\n";
+
+    tree.root = tree.deleteNode(tree.root, 30);
+    cout << "After deleting 30, Inorder: ";
+    tree.inorder(tree.root);
+    cout << "\n";
+
+    return 0;
+}
