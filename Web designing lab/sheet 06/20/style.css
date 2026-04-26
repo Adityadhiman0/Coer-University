@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+header { background: #2e7d32; color: #fff; padding: 1rem; }
+nav ul { list-style: none; display: flex; gap: 1rem; }
+nav ul li a { color: #fff; text-decoration: none; }
+nav ul li a.active { text-decoration: underline; }
+.hero { text-align: center; padding: 2rem; background: url('../images/hero.jpg') no-repeat center/cover; color: #fff; }
+.btn { background: #43a047; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+.btn:hover { background: #1b5e20; }
+form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto; }
+footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; }
+}
