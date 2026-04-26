@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Colors, Fonts, and Backgrounds</title>
+  <style>
+    /* General page styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header styling */
+    header {
+      background-color: #2e7d32;   /* Green background */
+      color: white;                /* White text */
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Headings */
+    h1 {
+      font-family: 'Georgia', serif;
+      font-size: 36px;
+    }
+    h2 {
+      color: #1565c0;              /* Blue text */
+      border-bottom: 2px solid #1565c0;
+      padding-bottom: 5px;
+    }
+
+    /* Paragraph styling */
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+      margin: 10px 20px;
+    }
+
+    /* Section backgrounds */
+    .about {
+      background-color: #e8f5e9;   /* Light green background */
+      padding: 15px;
+    }
+    .services {
+      background-color: #e3f2fd;   /* Light blue background */
+      padding: 15px;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Styled Webpage</h1>
+    <p>Using CSS colors, fonts, and backgrounds</p>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About</h2>
+    <p>This section has a light green background. The text is styled with a clean font and spacing.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Services</h2>
+    <p>This section uses a light blue background. Headings are styled with a bold color and underline.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 CSS Styling Demo</p>
+  </footer>
+</body>
+</html>
