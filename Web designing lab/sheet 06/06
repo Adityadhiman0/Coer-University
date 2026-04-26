@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Example Webpage</title>
+</head>
+<body>
+  <!-- Heading -->
+  <h1>Student Information</h1>
+  <p>This page demonstrates how to use tables in HTML to display structured data.</p>
+
+  <!-- Table -->
+  <table border="1" cellpadding="10" cellspacing="0">
+    <caption><strong>Class 10 Student List</strong></caption>
+    <thead>
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01</td>
+        <td>Amit Sharma</td>
+        <td>Mathematics</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>Priya Singh</td>
+        <td>Science</td>
+        <td>92</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>Rahul Verma</td>
+        <td>English</td>
+        <td>78</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>Neha Gupta</td>
+        <td>Social Studies</td>
+        <td>88</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 My Table Webpage</p>
+  </footer>
+</body>
+</html>
