@@ -1,0 +1,498 @@
+
+--------------------------------------------------------------------------
+Q1. What is Test Planning? Explain the main steps involved in the test
+    planning process.
+--------------------------------------------------------------------------
+ANSWER:
+
+Test planning is the activity of defining the objectives, scope, approach,
+resources, schedule and risks of testing, and documenting them in a Test
+Plan. It answers: what to test, how to test, who will test, when, and with
+what tools.
+
+Main steps:
+1. Understand the product and requirements : Study SRS, design, user needs.
+2. Define scope                : What features are in scope / out of scope.
+3. Set objectives              : e.g., find defects, verify requirements.
+4. Risk analysis               : Identify product and project risks and
+                                 prioritise testing for high-risk areas.
+5. Select test strategy/approach: Levels, types, techniques, automation.
+6. Define entry and exit criteria, suspension/resumption criteria.
+7. Estimate effort and resources: People, tools, hardware, test data.
+8. Prepare schedule            : Milestones and deadlines.
+9. Define roles and responsibilities.
+10. Plan test environment and test data.
+11. Define deliverables        : Test cases, reports, defect logs.
+12. Plan defect management and metrics.
+13. Review and approve the plan with stakeholders.
+
+
+--------------------------------------------------------------------------
+Q2. What is a Test Strategy? Explain its importance in software testing.
+--------------------------------------------------------------------------
+ANSWER:
+
+A Test Strategy is a high-level document that describes the general
+approach to testing for an organisation or product: test levels, test types,
+techniques, tools, environments and standards. It is usually static and
+reused across projects.
+
+Importance:
+1. Gives a common direction and consistent approach to all teams.
+2. Helps in selecting suitable techniques and tools.
+3. Identifies risks early and decides how to mitigate them.
+4. Supports accurate planning and estimation.
+5. Ensures optimal use of resources and avoids duplication.
+6. Defines quality objectives and entry/exit criteria at a high level.
+7. Improves communication among stakeholders.
+8. Helps achieve better coverage and product quality.
+
+
+--------------------------------------------------------------------------
+Q3. What is a Test Plan? Explain the major contents of a Test Plan.
+--------------------------------------------------------------------------
+ANSWER:
+
+A Test Plan is a detailed, project-specific document that defines the scope,
+approach, resources and schedule of testing activities (IEEE 829 standard).
+
+Major contents:
+1. Test plan identifier and introduction.
+2. Test items               : Modules/builds to be tested.
+3. Features to be tested    : Functions in scope.
+4. Features not to be tested: Out-of-scope items with reasons.
+5. Test approach            : Levels, types, techniques, automation.
+6. Item pass/fail criteria  : When a test is passed or failed.
+7. Entry and exit criteria  : Conditions to start/stop testing.
+8. Suspension and resumption criteria.
+9. Test deliverables        : Test cases, reports, logs.
+10. Test environment        : Hardware, software, tools, data.
+11. Staffing and training   : Roles and responsibilities.
+12. Schedule and milestones.
+13. Risks and contingencies.
+14. Approvals               : Sign-off by stakeholders.
+
+
+--------------------------------------------------------------------------
+Q4. Differentiate between a Test Strategy and a Test Plan.
+--------------------------------------------------------------------------
+ANSWER:
+
++------------------+-----------------------------+------------------------+
+| Basis            | Test Strategy               | Test Plan              |
++------------------+-----------------------------+------------------------+
+| Level            | High-level, organisation/   | Detailed, project/     |
+|                  | product wide                | release specific       |
+| Purpose          | Defines general approach    | Defines how, when, who |
+|                  |                             | for a project          |
+| Changes          | Rarely changes              | Changes with project   |
+| Created by       | Project/QA manager          | Test lead              |
+| Scope            | Common to many projects     | One project            |
+| Contents         | Standards, techniques,      | Scope, schedule,       |
+|                  | tools, risks                | resources, criteria    |
+| Derived from     | Business requirements       | SRS and test strategy  |
+| Level of detail  | General                     | Specific               |
++------------------+-----------------------------+------------------------+
+
+
+--------------------------------------------------------------------------
+Q5. What are the main goals and objectives of software testing? Explain.
+--------------------------------------------------------------------------
+ANSWER:
+
+1. Find defects        : Detect errors before users do.
+2. Verify requirements : Ensure the software does what was specified
+                         (verification).
+3. Validate user needs : Ensure it solves the real problem (validation).
+4. Prevent defects     : Early testing/reviews stop defects from spreading.
+5. Build confidence    : Give stakeholders assurance about quality.
+6. Provide information : Give data to decide on release.
+7. Reduce risk         : Lower the chance of failures in production.
+8. Ensure compliance   : Meet legal, standards and contract requirements.
+9. Assess quality attributes : Performance, security, usability, reliability.
+10. Reduce cost        : Defects found early are cheaper to fix.
+
+Note: Testing can show the presence of defects but cannot prove their
+absence.
+
+
+--------------------------------------------------------------------------
+Q6. What are Test Phases? Explain the different phases of software
+    testing.
+--------------------------------------------------------------------------
+ANSWER:
+
+Test phases are the stages of the Software Testing Life Cycle (STLC) and
+also the levels of testing.
+
+STLC phases:
+1. Requirement analysis   : Understand testable requirements.
+2. Test planning          : Plan, estimate, choose tools.
+3. Test case development  : Design test cases and test data.
+4. Test environment setup : Prepare hardware/software/data.
+5. Test execution         : Run tests, log defects.
+6. Test cycle closure     : Reports, metrics, lessons learned.
+
+Test levels:
+1. Unit testing        : Individual functions/classes by developers.
+2. Integration testing : Interaction between modules/interfaces.
+3. System testing      : The complete integrated system against the SRS.
+4. Acceptance testing  : User/client validates readiness (UAT, alpha, beta).
+
+
+--------------------------------------------------------------------------
+Q7. What factors should be considered while developing a Test Strategy?
+--------------------------------------------------------------------------
+ANSWER:
+
+1. Business objectives and the criticality of the application.
+2. Scope and complexity of the product.
+3. Risk analysis (what failures are most costly).
+4. Project constraints: time, budget, resources.
+5. Development model (Waterfall, Agile, DevOps).
+6. Technology and architecture (web, mobile, cloud).
+7. Team skills and availability.
+8. Tools and automation possibilities.
+9. Test environment and test data availability.
+10. Customer/regulatory/compliance requirements.
+11. Types of testing needed (functional, performance, security, usability).
+12. Entry/exit criteria and quality goals.
+13. Defect management and reporting process.
+14. Past project experience and lessons learned.
+15. Maintainability and expected number of releases (regression needs).
+
+
+--------------------------------------------------------------------------
+Q8. Explain the resource requirements needed for software testing.
+--------------------------------------------------------------------------
+ANSWER:
+
+1. Human resources : Test manager, test lead, test analysts/engineers,
+   automation engineers, performance/security testers, with proper domain
+   and technical skills and training.
+2. Hardware        : Servers, desktops, mobile devices, network equipment.
+3. Software        : Operating systems, browsers, databases, third-party
+   software and licences.
+4. Test tools      : Test management (TestRail), defect tracking (JIRA),
+   automation (Selenium), performance (JMeter), security tools.
+5. Test environment: Stable QA/staging environments similar to production.
+6. Test data       : Valid, invalid and boundary data; masked production data.
+7. Documentation   : SRS, design documents, user manuals.
+8. Time            : Adequate schedule for design, execution, retesting.
+9. Budget          : Cost for people, tools, licences, infrastructure.
+10. Facilities     : Workspace, access rights, network and cloud services.
+
+
+--------------------------------------------------------------------------
+Q9. What is a Test Schedule? Explain the importance of scheduling in
+    software testing.
+--------------------------------------------------------------------------
+ANSWER:
+
+A test schedule is a timeline showing testing activities, their start and end
+dates, durations, dependencies, milestones and the people responsible. It
+is part of the test plan and usually shown as a Gantt chart.
+
+Typical activities: test planning, test case design, environment setup,
+execution cycles, regression, defect retesting, reporting.
+
+Importance:
+1. Ensures testing completes within the project deadline.
+2. Helps allocate resources effectively.
+3. Shows dependencies (e.g., build availability).
+4. Allows progress tracking against plan.
+5. Early warning of delays and risk.
+6. Improves coordination between dev, test and management.
+7. Helps in cost control.
+8. Prevents last-minute rushing and quality compromises.
+
+
+--------------------------------------------------------------------------
+Q10. What is a Test Case? Explain the main components of a test case.
+--------------------------------------------------------------------------
+ANSWER:
+
+A test case is a set of inputs, execution conditions and expected results
+designed to verify a particular feature or requirement.
+
+Components:
+1. Test Case ID        : Unique identifier (TC_LOGIN_01).
+2. Title / Description: What is being tested.
+3. Module / Feature.
+4. Preconditions       : State needed before execution (user registered).
+5. Test steps          : Ordered actions to perform.
+6. Test data           : Input values.
+7. Expected result     : Correct behaviour as per requirement.
+8. Actual result       : Observed behaviour.
+9. Status              : Pass / Fail / Blocked / Not run.
+10. Priority / Type    : Importance, positive/negative.
+11. Postconditions     : System state after execution.
+12. Requirement ID     : Traceability link.
+13. Tester name, date, environment, remarks.
+
+Example:
+TC_LOGIN_01 | Valid login | Precondition: user registered | Steps: open
+login page, enter valid user/password, click Login | Expected: dashboard
+opens.
+
+
+--------------------------------------------------------------------------
+Q11. Explain the process of designing and writing effective test cases.
+--------------------------------------------------------------------------
+ANSWER:
+
+Process:
+1. Study requirements (SRS, use cases) and clarify doubts.
+2. Identify test conditions/scenarios (what needs to be tested).
+3. Select suitable design techniques (EP, BVA, decision tables, state
+   transition).
+4. Write test cases with ID, steps, data, expected results.
+5. Include positive and negative cases, and boundary/edge conditions.
+6. Define preconditions and test data.
+7. Map test cases to requirements (traceability matrix).
+8. Review test cases with peers/lead and correct them.
+9. Prioritise test cases (high-risk first).
+10. Maintain and update with changes.
+
+Characteristics of an effective test case:
+- Clear, simple and unambiguous.
+- Independent and repeatable.
+- Has a precise expected result.
+- Traceable to a requirement.
+- Covers maximum with minimum cases (no redundancy).
+- Reusable and easy to maintain.
+- Has a reasonable chance of finding defects.
+
+
+--------------------------------------------------------------------------
+Q12. What is Bug Reporting? Explain the important information included in
+     a bug report.
+--------------------------------------------------------------------------
+ANSWER:
+
+Bug reporting is the process of documenting a defect found in testing and
+communicating it to the developers in a clear and reproducible manner,
+usually through a defect tracking tool.
+
+Important information:
+1. Bug ID and title.
+2. Module / feature and build version.
+3. Environment (OS, browser, device).
+4. Steps to reproduce.
+5. Expected result and actual result.
+6. Severity and priority.
+7. Status and assigned developer.
+8. Reported by and date.
+9. Attachments (screenshots, logs, videos).
+10. Linked test case/requirement.
+11. Comments and history.
+
+Tips: report one bug per report, be specific and objective, never blame the
+developer, and verify that the bug is reproducible and not a duplicate.
+
+
+--------------------------------------------------------------------------
+Q13. Explain the Bug Life Cycle in software testing.
+--------------------------------------------------------------------------
+ANSWER:
+
+The Bug Life Cycle is the journey of a bug from discovery to closure.
+
+     NEW --> ASSIGNED --> OPEN --> FIXED --> RETEST --> VERIFIED --> CLOSED
+               |            |                    |
+               |            +--> DEFERRED        +--> REOPENED --> ASSIGNED
+               +--> REJECTED / DUPLICATE (closed without fix)
+
+1. New        : Tester logs the bug.
+2. Assigned   : Lead validates and assigns to a developer.
+3. Open       : Developer begins analysis and fix.
+4. Fixed      : Developer completes the fix.
+5. Retest     : Tester tests the fix in the new build.
+6. Verified/Closed : Fix works; bug closed.
+7. Reopened   : Fix fails; sent back to the developer.
+8. Rejected   : Not a valid bug.
+9. Duplicate  : Already reported earlier.
+10. Deferred  : Postponed to a future release.
+
+
+--------------------------------------------------------------------------
+Q14. What are Test Metrics? Explain their importance in measuring testing
+     activities.
+--------------------------------------------------------------------------
+ANSWER:
+
+Test metrics are quantitative measurements used to assess the progress,
+quality and effectiveness of testing (e.g., test cases executed, defects
+found, pass percentage).
+
+Importance:
+1. Track progress against the plan.
+2. Measure product quality and release readiness.
+3. Evaluate test effectiveness and efficiency.
+4. Support decisions with data, not guesses.
+5. Identify weak modules and process problems.
+6. Improve future estimation and planning.
+7. Communicate status clearly to stakeholders.
+8. Basis for continuous process improvement.
+
+
+--------------------------------------------------------------------------
+Q15. Explain different types of testing metrics used in software testing.
+--------------------------------------------------------------------------
+ANSWER:
+
+1. Process metrics : Test case preparation and execution productivity, test
+   coverage, schedule and effort variance, defect removal efficiency.
+2. Product metrics : Defect density, defects by severity/module, MTBF, pass
+   percentage.
+3. Project metrics : Planned vs actual cost, effort, resource utilisation.
+
+Common metrics and formulas:
+- % Test cases executed     = executed / total x 100
+- % Test cases passed       = passed / executed x 100
+- Defect density            = defects / KLOC
+- Defect removal efficiency = defects found in testing /
+                              (testing + post-release defects) x 100
+- Test coverage             = requirements covered / total x 100
+- Defect leakage            = post-release defects / total defects x 100
+- Defect rejection ratio    = rejected / total reported x 100
+- Defect age                = closed date - opened date
+
+Metrics can be absolute (raw counts) or derived (percentages, ratios).
+
+
+--------------------------------------------------------------------------
+Q16. What are Test Case Design Techniques? Explain their importance in
+     software testing.
+--------------------------------------------------------------------------
+ANSWER:
+
+Test case design techniques are systematic methods used to derive a small,
+effective set of test cases from requirements or code, because exhaustive
+testing is impossible.
+
+Categories:
+1. Black-box (specification-based): Equivalence Partitioning, Boundary Value
+   Analysis, Decision Table, State Transition, Use Case testing, Error
+   guessing.
+2. White-box (structure-based): Statement, branch/decision, condition and
+   path coverage.
+3. Experience-based: Error guessing, exploratory testing, checklist.
+
+Importance:
+1. Reduce number of test cases while keeping good coverage.
+2. Increase chance of finding defects.
+3. Save time, effort and cost.
+4. Give a systematic and repeatable approach.
+5. Avoid redundant test cases.
+6. Provide measurable coverage and traceability.
+7. Help testers think about both valid and invalid conditions.
+
+
+--------------------------------------------------------------------------
+Q17. What is Equivalence Partitioning? Explain with a suitable example.
+--------------------------------------------------------------------------
+ANSWER:
+
+Equivalence Partitioning (EP) is a black-box technique in which the input
+domain is divided into groups (partitions) of data that the software treats
+in the same way. Only one representative value from each partition needs to
+be tested, because if one value works, all others in that partition should
+also work.
+
+Steps: identify input conditions -> divide into valid and invalid partitions
+-> pick one value from each -> write test cases.
+
+Example: A field accepts marks from 0 to 100.
+
+   Partition 1 (invalid): marks < 0       -> e.g., -5
+   Partition 2 (valid)  : 0 <= marks <= 100 -> e.g., 50
+   Partition 3 (invalid): marks > 100     -> e.g., 120
+
+Test cases:
+   TC1: -5   -> Error message "Invalid marks"
+   TC2: 50   -> Accepted
+   TC3: 120  -> Error message "Invalid marks"
+
+Only 3 tests are needed instead of 100+. Non-numeric input (e.g., "abc")
+can be added as another invalid partition.
+
+
+--------------------------------------------------------------------------
+Q18. What is Boundary Value Analysis? Explain with a suitable example.
+--------------------------------------------------------------------------
+ANSWER:
+
+Boundary Value Analysis (BVA) is a black-box technique that tests values at
+the edges of equivalence partitions, because defects most often occur at
+boundaries (e.g., using < instead of <=).
+
+Typical values: minimum - 1, minimum, minimum + 1, nominal, maximum - 1,
+maximum, maximum + 1.
+
+Example: Age field accepts 18 to 60.
+
+   Boundary values: 17, 18, 19, 59, 60, 61 (and nominal 35)
+
+Test cases:
+   17 -> Rejected (invalid, just below min)
+   18 -> Accepted (min)
+   19 -> Accepted
+   35 -> Accepted (nominal)
+   59 -> Accepted
+   60 -> Accepted (max)
+   61 -> Rejected (invalid, just above max)
+
+If the developer wrote "age > 18" instead of "age >= 18", the test with
+value 18 will expose the defect.
+
+
+--------------------------------------------------------------------------
+Q19. Differentiate between Equivalence Partitioning and Boundary Value
+     Analysis.
+--------------------------------------------------------------------------
+ANSWER:
+
++-----------------+----------------------------+---------------------------+
+| Basis           | Equivalence Partitioning   | Boundary Value Analysis   |
++-----------------+----------------------------+---------------------------+
+| Concept         | Divides inputs into        | Tests values at the edges |
+|                 | classes                    | of the classes            |
+| Values tested   | One value from each class  | Min, max and values just  |
+|                 | (any value)                | inside/outside            |
+| Focus           | Coverage of all classes    | Off-by-one and boundary   |
+|                 |                            | errors                    |
+| Number of tests | Fewer                      | More                      |
+| Defect type     | Wrong handling of whole    | Wrong relational operator |
+| found           | classes                    | (<, <=)                   |
+| Example (1-100) | 0, 50, 101                 | 0, 1, 2, 99, 100, 101     |
+| Usage           | First technique applied    | Applied after EP, as an   |
+|                 |                            | extension                 |
++-----------------+----------------------------+---------------------------+
+
+Both are normally used together for better coverage.
+
+
+--------------------------------------------------------------------------
+Q20. What is Test Case Planning? Explain the steps involved in test case
+     planning.
+--------------------------------------------------------------------------
+ANSWER:
+
+Test case planning is the activity of deciding which test cases are needed,
+how they will be designed, who will write them, when, and how they will be
+organised and executed, so that requirements are adequately covered.
+
+Steps:
+1. Analyse requirements and identify features to test.
+2. Identify test scenarios/conditions.
+3. Decide test design techniques (EP, BVA, etc.).
+4. Estimate the number of test cases and effort.
+5. Prioritise test cases based on risk and business importance.
+6. Assign test cases to team members.
+7. Define test data and environment needs.
+8. Decide format/templates and naming standards.
+9. Create the requirement traceability matrix (RTM).
+10. Plan reviews and approval of test cases.
+11. Schedule test case design and execution.
+12. Plan maintenance and regression suite updates.
